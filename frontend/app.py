@@ -30,11 +30,24 @@ class InputValues:
     activity_list: list
     morning: bool
     param0: str
+
+@dataclass
+class DockerApi:
+    
+    param1: int
+    param2: int
+    quantity: int
+    animal: str
+    countries: list
+    place: str
+    activity_list: list
+    morning: bool
+    param0: str
     
 # Define the prediction function
 def predict_with_my_model(*params):
     req_params = InputValues(*params)
-    result = f"Processed values: {req_params.param1}, {req_params.param2}, {req_params.quantity}, {req_params.animal}, {req_params.countries}, {req_params.place}, {req_params.activity_list}, {req_params.morning}, {req_params.param0}, {req_params.param0}, {req_params.param0}, {req_params.param0}"
+    result = f"Processed values: {req_params.param1}, {req_params.param2}, {req_params.quantity}, {req_params.animal}, {req_params.countries}, {req_params.place}, {req_params.activity_list}, {req_params.morning}, {req_params.param0}, {req_params.param0}, {req_params.param0}, {req_par                             ams.param0}"
     return result
 
 def slowly_reverse(word, progress=gr.Progress()):
